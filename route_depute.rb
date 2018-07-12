@@ -47,11 +47,17 @@ end
 #methode global
 #renvoit les infos (prenom/nom/email) sur les deputes
 def global
+	indice_chargement = 1
+
 	listeNomPrenomEmail = []
 	#recupère liste des url de chaque depute (avec methode get_depute_page)
 	liste_depute = get_depute_page
 	#recupere les infos sur les deputes et les mettre dans : listeNomPrenomEmail (mettre les hash dans l'array)
-	liste_depute.each{|i| listeNomPrenomEmail.push(get_nom_prenom_mail(i)) }
+	liste_depute.each{|i| 
+		puts "#{indice_chargement}/#{liste_depute.length}"
+		listeNomPrenomEmail.push(get_nom_prenom_mail(i))
+		indice_chargement+=1
+	}
 
 	#TEST RAPIDE SUR 5 DEPUTES
 	#5.times {|i| listeNomPrenomEmail.push(get_nom_prenom_mail(liste_depute[i])) }

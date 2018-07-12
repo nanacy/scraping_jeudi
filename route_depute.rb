@@ -44,6 +44,8 @@ def get_nom_prenom_mail(url)
 	return {"prenom" => prenom, "nom" => nom, "email" => email}
 end
 
+#methode global
+#renvoit les infos (prenom/nom/email) sur les deputes
 def global
 	listeNomPrenomEmail = []
 	#recupère liste des url de chaque depute (avec methode get_depute_page)

@@ -2,15 +2,6 @@ require "rubygems" #
 require "nokogiri" #
 require "open-uri" #
 ####################
-## !!!!!!
-# A REVOIR
-# FAIRE METHODE QUI ECRIS LES URL
-# + HISTOIRE
-# !!!!!!!
-
-
-# ----------------  Il voudrait toutes les adresses email des mairies du Val d'Oise ----------------
-
 
 #prend en paramètre : url_mairie
 #renvoie hash (nomVille => adrMailMairie)
